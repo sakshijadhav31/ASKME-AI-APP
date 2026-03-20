@@ -32,8 +32,8 @@ Navigate to the backend directory, create a virtual environment, and install dep
 
 Bash
 cd AI_CHAT_BACKEND
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python -m venv venv 
+venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn main:app --reload
 
@@ -44,6 +44,7 @@ Bash
 cd AI_CHAT_FRONTEND
 npm install
 npm start
+
 🔧 Environment Variables
 Ensure you have a .env file in your backend folder with the following:
 
@@ -56,15 +57,3 @@ GOOGLE_CLIENT_ID: For OAuth integration.
 📜 License
 This project is for personal development and educational purposes.
 
-
-
-```text
-AI_CHAT_APP/
-├── AI_CHAT_BACKEND/       # FastAPI server, database models, and AI logic
-│   ├── main.py            # API Entry point
-│   ├── models.py          # SQLAlchemy User & Log models
-│   └── database.py        # Connection and Session logic
-└── AI_CHAT_FRONTEND/      # React components and frontend assets
-    ├── src/               # Application logic (App.js, Components)
-    ├── public/            # Static assets
-    └── package.json       # Dependencies and scripts
